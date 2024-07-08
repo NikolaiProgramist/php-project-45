@@ -1,0 +1,13 @@
+{
+    "name": "hexlet/code",
+    "description": "First project on hexlet",
+    "type": "project",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "NikolaiProgramist",
+            "email": "nikluk2005@mail.ru"
+        }
+    ],
+    "require": {}
+}
