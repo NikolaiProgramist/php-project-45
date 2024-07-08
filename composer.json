@@ -9,5 +9,8 @@
             "email": "nikluk2005@mail.ru"
         }
     ],
-    "require": {}
+    "require": {},
+    "bin": [
+        "bin/brain-games"
+    ]
 }
