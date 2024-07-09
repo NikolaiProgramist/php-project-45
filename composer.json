@@ -9,8 +9,15 @@
             "email": "nikluk2005@mail.ru"
         }
     ],
-    "require": {},
+    "require": {
+        "wp-cli/php-cli-tools": "^0.12.0"
+    },
     "bin": [
         "bin/brain-games"
-    ]
+    ],
+    "autoload": {
+        "files": [
+            "src/Cli.php"
+        ]
+    }
 }
