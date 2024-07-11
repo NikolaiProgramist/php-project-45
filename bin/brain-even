@@ -4,54 +4,6 @@
 
 require_once __DIR__ . '/../vendor/autoload.php';
 
-use function cli\line;
-use function cli\prompt;
-use function BrainGames\Cli\greeting;
-
-$name = greeting();
-
-line('Answer "yes" if the number is even, otherwise answer "no".');
+use function BrainGames\Games\Brain\Even\brainEven;
 
 brainEven();
-
-function brainEven(): void
-{
-    global $name;
-
-    for ($i = 1; $i <= 3; $i++) {
-        $num = rand(0, 20);
-        line('Question: %s', $num);
-        $answer = prompt('Your answer');
-        $correctAnswer = isEven($num);
-
-        if ($answer !== 'yes' && $answer !== 'no') {
-            gameover($answer, $correctAnswer);
-        }
-
-        if ($correctAnswer !== $answer) {
-            gameover($answer, $correctAnswer);
-        }
-
-        line('Correct!');
-    }
-
-    line('Congratulations, %s!', $name);
-}
-
-function gameover(string $answer, string $correctAnswer): void
-{
-    global $name;
-
-    line('\'%s\' is wrong answer ;(. Correct answer was \'%s\'.', $answer, $correctAnswer);
-    line('Let\'s try again, %s!', $name);
-    exit;
-}
-
-function isEven(int $num): string
-{
-    if ($num % 2 === 0) {
-        return 'yes';
-    } else {
-        return 'no';
-    }
-}
