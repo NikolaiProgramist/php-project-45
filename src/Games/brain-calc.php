@@ -2,8 +2,6 @@
 
 namespace BrainGames\Games\Brain\Calc;
 
-require_once __DIR__ . '/../../vendor/autoload.php';
-
 use function cli\line;
 use function cli\prompt;
 use function BrainGames\Engine\greeting;
@@ -19,8 +17,8 @@ function brainCalc(): void
     line('What is the result of the expression?');
 
     for ($i = 1; $i <= 3; $i++) {
-        $operand1 = rand(0, 1);
-        $operand2 = rand(0, 1);
+        $operand1 = rand(0, 100);
+        $operand2 = rand(0, 100);
         $operation = randomOperation('+-*');
 
         line('Question: %s %s %s', $operand1, $operation, $operand2);
