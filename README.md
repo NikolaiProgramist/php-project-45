@@ -5,6 +5,7 @@
 
 [![Maintainability](https://api.codeclimate.com/v1/badges/dd0810323730aa39b454/maintainability)](https://codeclimate.com/github/NikolaiProgramist/php-project-45/maintainability)
 
-### Links:
+### Links to the Asciinema:
 
-[Asciinema](https://asciinema.org/connect/60321ab9-ec4b-48fd-afb3-ef2643d7a61e)
++ [brain-even](https://asciinema.org/a/fmYE6VCWbbSwVEICccEX1tlXt)
++ [brain-calc](https://asciinema.org/a/dyhcW4o0VdfKu1YZm59YhSz3L)
