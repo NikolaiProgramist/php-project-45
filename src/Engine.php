@@ -51,3 +51,15 @@ function calc(int $operand1, int $operand2, string $operation): string
             return (string) ($operand1 * $operand2);
     }
 }
+
+function gcd(int $num1, int $num2): string
+{
+    $maxNum = max($num1, $num2);
+    $minNum = min($num1, $num2);
+
+    for ($i = $minNum; $i > 0; $i--) {
+        if ($maxNum % $i === 0 && $minNum % $i === 0) {
+            return (string) $i;
+        }
+    }
+}
