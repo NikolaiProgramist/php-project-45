@@ -10,3 +10,4 @@
 + [brain-even](https://asciinema.org/a/fmYE6VCWbbSwVEICccEX1tlXt)
 + [brain-calc](https://asciinema.org/a/dyhcW4o0VdfKu1YZm59YhSz3L)
 + [brain-gcd](https://asciinema.org/a/smRugMtiDPYKUEARN1KMWr9Bw)
++ [brain-progression](https://asciinema.org/a/Z7pBnVTsLIclXdx7sbxoqCauo)
