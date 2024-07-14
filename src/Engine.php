@@ -2,6 +2,7 @@
 
 namespace BrainGames\Engine;
 
+use function BrainGames\Games\Brain\Progression\progression;
 use function cli\line;
 use function cli\prompt;
 
@@ -62,4 +63,24 @@ function gcd(int $num1, int $num2): string
             return (string) $i;
         }
     }
+}
+
+function randomProgression(): array
+{
+    $progression = [];
+
+    $progressionLength = rand(5, 10);
+    $progressionChange = rand(1, 10);
+    $progressionNumber = $progressionChange;
+
+    for ($i = 0; $i < $progressionLength; $i++) {
+        $progression[] = $progressionNumber;
+        $progressionNumber += $progressionChange;
+    }
+
+    $randomNumber = rand(0, $progressionLength - 1);
+    $correctAnswer = (string) $progression[$randomNumber];
+    $progression[$randomNumber] = '..';
+
+    return ['progression' => implode(' ', $progression), 'correctAnswer' => $correctAnswer];
 }
