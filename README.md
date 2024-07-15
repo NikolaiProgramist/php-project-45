@@ -6,13 +6,10 @@
 ---
 
 ## About
-
 ---
-
 Brain-games is a project with 5 math games. The project is written in PHP 8.3.
 The project is modular and does not use OOP.
 You can also look at how the game plays out, with different game outcomes, using the links below.
-
 ## Links to the Asciinema
 
 ---
