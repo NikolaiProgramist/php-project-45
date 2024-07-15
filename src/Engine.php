@@ -87,7 +87,7 @@ function randomProgression(): array
 
 function isPrime(int $num): string
 {
-    if ($num === 1) {
+    if ($num === 0 || $num === 1) {
         return 'no';
     }
 
