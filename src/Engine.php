@@ -51,6 +51,8 @@ function calc(int $operand1, int $operand2, string $operation): string
         case '*':
             return (string) ($operand1 * $operand2);
     }
+
+    return '0';
 }
 
 function gcd(int $num1, int $num2): string
@@ -63,6 +65,8 @@ function gcd(int $num1, int $num2): string
             return (string) $i;
         }
     }
+
+    return '0';
 }
 
 function randomProgression(): array
