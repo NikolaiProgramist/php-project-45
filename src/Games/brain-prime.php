@@ -24,7 +24,7 @@ function brainPrime(): void
         $correctAnswer = isPrime($num);
 
         if ($correctAnswer !== $answer) {
-            gameover($answer, $correctAnswer, $name);
+            gameOver($answer, $correctAnswer, $name);
         }
 
         line('Correct!');

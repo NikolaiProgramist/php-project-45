@@ -26,7 +26,7 @@ function progression(): void
         $answer = prompt('Your answer');
 
         if ($correctAnswer !== $answer) {
-            gameover($answer, $correctAnswer, $name);
+            gameOver($answer, $correctAnswer, $name);
         }
 
         line('Correct!');

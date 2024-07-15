@@ -22,11 +22,11 @@ function brainEven(): void
         $correctAnswer = isEven($num);
 
         if ($answer !== 'yes' && $answer !== 'no') {
-            gameover($answer, $correctAnswer, $name);
+            gameOver($answer, $correctAnswer, $name);
         }
 
         if ($correctAnswer !== $answer) {
-            gameover($answer, $correctAnswer, $name);
+            gameOver($answer, $correctAnswer, $name);
         }
 
         line('Correct!');

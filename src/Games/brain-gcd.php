@@ -25,7 +25,7 @@ function brainGcd(): void
         $correctAnswer = gcd($num1, $num2);
 
         if ($correctAnswer !== $answer) {
-            gameover($answer, $correctAnswer, $name);
+            gameOver($answer, $correctAnswer, $name);
         }
 
         line('Correct!');

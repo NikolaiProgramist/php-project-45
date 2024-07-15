@@ -2,7 +2,6 @@
 
 namespace BrainGames\Engine;
 
-use function BrainGames\Games\Brain\Progression\progression;
 use function cli\line;
 use function cli\prompt;
 
@@ -19,7 +18,7 @@ function win(string $name): void
     line('Congratulations, %s!', $name);
 }
 
-function gameover(string $answer, string $correctAnswer, string $name): void
+function gameOver(string $answer, string $correctAnswer, string $name): void
 {
     line('\'%s\' is wrong answer ;(. Correct answer was \'%s\'.', $answer, $correctAnswer);
     line('Let\'s try again, %s!', $name);

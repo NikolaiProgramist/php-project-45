@@ -27,7 +27,7 @@ function brainCalc(): void
         $correctAnswer = calc($operand1, $operand2, $operation);
 
         if ($correctAnswer !== $answer) {
-            gameover($answer, $correctAnswer, $name);
+            gameOver($answer, $correctAnswer, $name);
         }
 
         line('Correct!');
