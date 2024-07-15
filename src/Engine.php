@@ -84,3 +84,18 @@ function randomProgression(): array
 
     return ['progression' => implode(' ', $progression), 'correctAnswer' => $correctAnswer];
 }
+
+function isPrime(int $num): string
+{
+    if ($num === 1) {
+        return 'no';
+    }
+
+    for ($i = 2; $i < $num; $i++) {
+        if ($num % $i === 0) {
+            return 'no';
+        }
+    }
+
+    return 'yes';
+}
