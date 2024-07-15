@@ -6,7 +6,7 @@ use function cli\line;
 use function cli\prompt;
 use function BrainGames\Engine\greeting;
 use function BrainGames\Engine\win;
-use function BrainGames\Engine\gameover;
+use function BrainGames\Engine\gameOver;
 use function BrainGames\Engine\randomOperation;
 use function BrainGames\Engine\calc;
 
