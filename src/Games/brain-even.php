@@ -7,7 +7,6 @@ use function cli\prompt;
 use function BrainGames\Engine\greeting;
 use function BrainGames\Engine\win;
 use function BrainGames\Engine\gameOver;
-use function BrainGames\Engine\isEven;
 
 function startBrainEven(): void
 {
@@ -33,4 +32,13 @@ function startBrainEven(): void
     }
 
     win($name);
+}
+
+function isEven(int $num): string
+{
+    if ($num % 2 === 0) {
+        return 'yes';
+    } else {
+        return 'no';
+    }
 }

@@ -25,15 +25,6 @@ function gameOver(string $answer, string $correctAnswer, string $name): void
     exit;
 }
 
-function isEven(int $num): string
-{
-    if ($num % 2 === 0) {
-        return 'yes';
-    } else {
-        return 'no';
-    }
-}
-
 function randomOperation(string $operations): string
 {
     $randomOperation = str_shuffle($operations);
