@@ -2,7 +2,7 @@
 
 namespace BrainGames\Games\Brain\Games;
 
-use function BrainGames\Engine\greeting;
+use function BrainGames\Cli\greeting;
 
 function startBrainGames(): void
 {
