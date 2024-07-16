@@ -10,7 +10,7 @@ use function BrainGames\Engine\gameOver;
 use function BrainGames\Engine\randomOperation;
 use function BrainGames\Engine\calc;
 
-function brainCalc(): void
+function startBrainCalc(): void
 {
     $name = greeting();
 

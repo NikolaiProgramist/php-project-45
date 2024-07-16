@@ -9,7 +9,7 @@ use function BrainGames\Engine\win;
 use function BrainGames\Engine\gameOver;
 use function BrainGames\Engine\gcd;
 
-function brainGcd(): void
+function startBrainGcd(): void
 {
     $name = greeting();
 

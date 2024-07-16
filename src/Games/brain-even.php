@@ -9,7 +9,7 @@ use function BrainGames\Engine\win;
 use function BrainGames\Engine\gameOver;
 use function BrainGames\Engine\isEven;
 
-function brainEven(): void
+function startBrainEven(): void
 {
     $name = greeting();
 

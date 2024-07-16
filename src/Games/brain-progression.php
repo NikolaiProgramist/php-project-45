@@ -9,7 +9,7 @@ use function BrainGames\Engine\win;
 use function BrainGames\Engine\gameOver;
 use function BrainGames\Engine\randomProgression;
 
-function progression(): void
+function startBrainProgression(): void
 {
     $name = greeting();
 
