@@ -5,7 +5,7 @@ namespace BrainGames\Games\Brain\Prime;
 use function cli\line;
 use function cli\prompt;
 use function BrainGames\Engine\greeting;
-use function BrainGames\Engine\win;
+use function BrainGames\Engine\winning;
 use function BrainGames\Engine\gameOver;
 use function BrainGames\Engine\isPrime;
 
@@ -30,5 +30,5 @@ function startBrainPrime(): void
         line('Correct!');
     }
 
-    win($name);
+    winning($name);
 }

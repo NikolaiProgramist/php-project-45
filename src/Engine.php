@@ -13,7 +13,7 @@ function greeting(): string
     return $name;
 }
 
-function win(string $name): void
+function winning(string $name): void
 {
     line('Congratulations, %s!', $name);
 }

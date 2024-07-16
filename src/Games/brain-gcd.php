@@ -5,7 +5,7 @@ namespace BrainGames\Games\Brain\Gcd;
 use function cli\line;
 use function cli\prompt;
 use function BrainGames\Engine\greeting;
-use function BrainGames\Engine\win;
+use function BrainGames\Engine\winning;
 use function BrainGames\Engine\gameOver;
 use function BrainGames\Engine\gcd;
 
@@ -31,5 +31,5 @@ function startBrainGcd(): void
         line('Correct!');
     }
 
-    win($name);
+    winning($name);
 }

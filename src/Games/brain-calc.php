@@ -5,7 +5,7 @@ namespace BrainGames\Games\Brain\Calc;
 use function cli\line;
 use function cli\prompt;
 use function BrainGames\Engine\greeting;
-use function BrainGames\Engine\win;
+use function BrainGames\Engine\winning;
 use function BrainGames\Engine\gameOver;
 use function BrainGames\Engine\randomOperation;
 use function BrainGames\Engine\calc;
@@ -33,5 +33,5 @@ function startBrainCalc(): void
         line('Correct!');
     }
 
-    win($name);
+    winning($name);
 }
