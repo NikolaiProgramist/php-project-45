@@ -9,16 +9,6 @@ Brain-games is a project with 5 math games. The project is written in PHP 8.3.
 The project is modular and does not use OOP.
 You can also look at how the game plays out, with different game outcomes, using the links below.
 
-## Links to the Asciinema
-
-### Games
-
-+ [brain-even](https://asciinema.org/a/fmYE6VCWbbSwVEICccEX1tlXt)
-+ [brain-calc](https://asciinema.org/a/dyhcW4o0VdfKu1YZm59YhSz3L)
-+ [brain-gcd](https://asciinema.org/a/smRugMtiDPYKUEARN1KMWr9Bw)
-+ [brain-progression](https://asciinema.org/a/Z7pBnVTsLIclXdx7sbxoqCauo)
-+ [brain-prime](https://asciinema.org/a/fTuJ6w7noDd8AtdI1ShPt0DmX)
-
 ## Prerequisites
 
 + Linux, MacOS, WSL
@@ -44,3 +34,25 @@ For example:
 ```bash
 make brain-even
 ```
+
+## Asciinema
+
+### Game brain-even
+
+[![asciicast](https://asciinema.org/a/fmYE6VCWbbSwVEICccEX1tlXt.svg)](https://asciinema.org/a/fmYE6VCWbbSwVEICccEX1tlXt)
+
+### Game brain-calc
+
+[![asciicast](https://asciinema.org/a/dyhcW4o0VdfKu1YZm59YhSz3L.svg)](https://asciinema.org/a/dyhcW4o0VdfKu1YZm59YhSz3L)
+
+### Game brain-gcd
+
+[![asciicast](https://asciinema.org/a/smRugMtiDPYKUEARN1KMWr9Bw.svg)](https://asciinema.org/a/smRugMtiDPYKUEARN1KMWr9Bw)
+
+### Game brain-progression
+
+[![asciicast](https://asciinema.org/a/Z7pBnVTsLIclXdx7sbxoqCauo.svg)](https://asciinema.org/a/Z7pBnVTsLIclXdx7sbxoqCauo)
+
+### Game brain-prime
+
+[![asciicast](https://asciinema.org/a/fTuJ6w7noDd8AtdI1ShPt0DmX.svg)](https://asciinema.org/a/fTuJ6w7noDd8AtdI1ShPt0DmX)
