@@ -9,7 +9,10 @@ function startGame(string $gameName): void
 {
     $name = greeting();
     $game = "BrainGames\\Games\\Brain\\{$gameName}\\startBrain{$gameName}";
-    $game($name);
+
+    if (function_exists($game)) {
+        $game($name);
+    }
 }
 
 function greeting(): string
