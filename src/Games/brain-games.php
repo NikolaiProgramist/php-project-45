@@ -2,6 +2,6 @@
 
 namespace BrainGames\Games\Brain\Games;
 
-function startBrainGames($name): void
+function startBrainGames(string $name): void
 {
 }

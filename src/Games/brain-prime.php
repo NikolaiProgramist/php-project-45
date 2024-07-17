@@ -8,7 +8,7 @@ use function BrainGames\Engine\winning;
 use function BrainGames\Engine\gameOver;
 use function BrainGames\Engine\isPrime;
 
-function startBrainPrime($name): void
+function startBrainPrime(string $name): void
 {
     line('Answer "yes" if given number is prime. Otherwise answer "no".');
 

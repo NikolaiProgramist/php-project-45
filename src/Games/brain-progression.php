@@ -8,7 +8,7 @@ use function BrainGames\Engine\winning;
 use function BrainGames\Engine\gameOver;
 use function BrainGames\Engine\randomProgression;
 
-function startBrainProgression($name): void
+function startBrainProgression(string $name): void
 {
     line('What number is missing in the progression?');
 

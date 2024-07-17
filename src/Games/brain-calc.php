@@ -9,7 +9,7 @@ use function BrainGames\Engine\gameOver;
 use function BrainGames\Engine\randomOperation;
 use function BrainGames\Engine\calc;
 
-function startBrainCalc($name): void
+function startBrainCalc(string $name): void
 {
     line('What is the result of the expression?');
 

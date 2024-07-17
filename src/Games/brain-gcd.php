@@ -8,7 +8,7 @@ use function BrainGames\Engine\winning;
 use function BrainGames\Engine\gameOver;
 use function BrainGames\Engine\gcd;
 
-function startBrainGcd($name): void
+function startBrainGcd(string $name): void
 {
     line('Find the greatest common divisor of given numbers.');
 

@@ -5,7 +5,7 @@ namespace BrainGames\Engine;
 use function cli\line;
 use function cli\prompt;
 
-function startGame($gameName): void
+function startGame(string $gameName): void
 {
     $name = greeting();
     $game = "BrainGames\\Games\\Brain\\{$gameName}\\startBrain{$gameName}";

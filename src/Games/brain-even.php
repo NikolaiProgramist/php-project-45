@@ -8,7 +8,7 @@ use function BrainGames\Engine\greeting;
 use function BrainGames\Engine\winning;
 use function BrainGames\Engine\gameOver;
 
-function startBrainEven($name): void
+function startBrainEven(string $name): void
 {
     line('Answer "yes" if the number is even, otherwise answer "no".');
 
