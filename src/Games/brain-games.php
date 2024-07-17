@@ -2,9 +2,6 @@
 
 namespace BrainGames\Games\Brain\Games;
 
-use function BrainGames\Cli\greeting;
-
-function startBrainGames(): void
+function startBrainGames($name): void
 {
-    greeting();
 }

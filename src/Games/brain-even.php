@@ -8,10 +8,8 @@ use function BrainGames\Engine\greeting;
 use function BrainGames\Engine\winning;
 use function BrainGames\Engine\gameOver;
 
-function startBrainEven(): void
+function startBrainEven($name): void
 {
-    $name = greeting();
-
     line('Answer "yes" if the number is even, otherwise answer "no".');
 
     for ($i = 1; $i <= 3; $i++) {

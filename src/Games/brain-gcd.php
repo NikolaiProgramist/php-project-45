@@ -4,15 +4,12 @@ namespace BrainGames\Games\Brain\Gcd;
 
 use function cli\line;
 use function cli\prompt;
-use function BrainGames\Engine\greeting;
 use function BrainGames\Engine\winning;
 use function BrainGames\Engine\gameOver;
 use function BrainGames\Engine\gcd;
 
-function startBrainGcd(): void
+function startBrainGcd($name): void
 {
-    $name = greeting();
-
     line('Find the greatest common divisor of given numbers.');
 
     for ($i = 1; $i <= 3; $i++) {

@@ -4,6 +4,6 @@
 
 require_once __DIR__ . '/../vendor/autoload.php';
 
-use function BrainGames\Games\Brain\Prime\startBrainPrime;
+use function BrainGames\Engine\startGame;
 
-startBrainPrime();
+startGame('Prime');

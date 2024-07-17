@@ -4,15 +4,12 @@ namespace BrainGames\Games\Brain\Prime;
 
 use function cli\line;
 use function cli\prompt;
-use function BrainGames\Engine\greeting;
 use function BrainGames\Engine\winning;
 use function BrainGames\Engine\gameOver;
 use function BrainGames\Engine\isPrime;
 
-function startBrainPrime(): void
+function startBrainPrime($name): void
 {
-    $name = greeting();
-
     line('Answer "yes" if given number is prime. Otherwise answer "no".');
 
     for ($i = 1; $i <= 3; $i++) {
