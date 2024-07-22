@@ -4,13 +4,14 @@ namespace BrainGames\Games\Brain\Calc;
 
 use function cli\line;
 use function cli\prompt;
-use function BrainGames\Engine\winning;
+use function BrainGames\Engine\greeting;
 use function BrainGames\Engine\gameOver;
 use function BrainGames\Engine\randomOperation;
-use function BrainGames\Engine\calc;
 
-function startBrainCalc(string $name): void
+function startBrainCalc(): void
 {
+    $name = greeting();
+
     line('What is the result of the expression?');
 
     for ($i = 1; $i <= 3; $i++) {

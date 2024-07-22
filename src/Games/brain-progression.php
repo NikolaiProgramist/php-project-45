@@ -4,12 +4,14 @@ namespace BrainGames\Games\Brain\Progression;
 
 use function cli\line;
 use function cli\prompt;
-use function BrainGames\Engine\winning;
+use function BrainGames\Engine\greeting;
 use function BrainGames\Engine\gameOver;
 use function BrainGames\Engine\randomProgression;
 
-function startBrainProgression(string $name): void
+function startBrainProgression(): void
 {
+    $name = greeting();
+
     line('What number is missing in the progression?');
 
     for ($i = 1; $i <= 3; $i++) {
@@ -29,5 +31,5 @@ function startBrainProgression(string $name): void
         line('Correct!');
     }
 
-    winning($name);
+    line('Congratulations, %s!', $name);
 }
