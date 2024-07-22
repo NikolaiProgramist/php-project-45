@@ -5,7 +5,6 @@ namespace BrainGames\Games\Brain\Even;
 use function cli\line;
 use function cli\prompt;
 use function BrainGames\Engine\greeting;
-use function BrainGames\Engine\winning;
 use function BrainGames\Engine\gameOver;
 
 function startBrainEven(): void
@@ -31,7 +30,7 @@ function startBrainEven(): void
         line('Correct!');
     }
 
-    winning($name);
+    line('Congratulations, %s!', $name);
 }
 
 function isEven(int $num): string

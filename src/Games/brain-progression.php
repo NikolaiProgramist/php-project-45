@@ -5,7 +5,6 @@ namespace BrainGames\Games\Brain\Progression;
 use function cli\line;
 use function cli\prompt;
 use function BrainGames\Engine\greeting;
-use function BrainGames\Engine\winning;
 use function BrainGames\Engine\gameOver;
 use function BrainGames\Engine\randomProgression;
 
@@ -32,5 +31,5 @@ function startBrainProgression(): void
         line('Correct!');
     }
 
-    winning($name);
+    line('Congratulations, %s!', $name);
 }

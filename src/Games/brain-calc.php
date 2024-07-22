@@ -5,10 +5,8 @@ namespace BrainGames\Games\Brain\Calc;
 use function cli\line;
 use function cli\prompt;
 use function BrainGames\Engine\greeting;
-use function BrainGames\Engine\winning;
 use function BrainGames\Engine\gameOver;
 use function BrainGames\Engine\randomOperation;
-use function BrainGames\Engine\calc;
 
 function startBrainCalc(): void
 {
@@ -33,5 +31,19 @@ function startBrainCalc(): void
         line('Correct!');
     }
 
-    winning($name);
+    line('Congratulations, %s!', $name);
+}
+
+function calc(int $operand1, int $operand2, string $operation): string
+{
+    switch ($operation) {
+        case '+':
+            return (string) ($operand1 + $operand2);
+        case '-':
+            return (string)($operand1 - $operand2);
+        case '*':
+            return (string) ($operand1 * $operand2);
+    }
+
+    return '0';
 }
