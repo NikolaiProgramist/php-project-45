@@ -44,4 +44,6 @@ function calc(int $operand1, int $operand2, string $operation): string
         case '*':
             return (string) ($operand1 * $operand2);
     }
+
+    return '';
 }
