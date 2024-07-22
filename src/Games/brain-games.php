@@ -2,6 +2,9 @@
 
 namespace BrainGames\Games\Brain\Games;
 
-function startBrainGames(string $name): void
+use function BrainGames\Cli\greeting;
+
+function startBrainGames(): void
 {
+    greeting();
 }

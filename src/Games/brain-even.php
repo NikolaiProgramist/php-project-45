@@ -7,8 +7,10 @@ use function cli\prompt;
 use function BrainGames\Engine\greeting;
 use function BrainGames\Engine\gameOver;
 
-function startBrainEven(string $name): void
+function startBrainEven(): void
 {
+    $name = greeting();
+
     line('Answer "yes" if the number is even, otherwise answer "no".');
 
     for ($i = 1; $i <= 3; $i++) {

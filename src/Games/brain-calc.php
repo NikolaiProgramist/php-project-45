@@ -31,5 +31,17 @@ function startBrainCalc(): void
         line('Correct!');
     }
 
-    winning($name);
+    line('Congratulations, %s!', $name);
+}
+
+function calc(int $operand1, int $operand2, string $operation): string
+{
+    switch ($operation) {
+        case '+':
+            return (string) ($operand1 + $operand2);
+        case '-':
+            return (string) ($operand1 - $operand2);
+        case '*':
+            return (string) ($operand1 * $operand2);
+    }
 }
