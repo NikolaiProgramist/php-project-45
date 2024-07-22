@@ -45,4 +45,3 @@ function isPrime(int $num): string
 
     return 'yes';
 }
-
