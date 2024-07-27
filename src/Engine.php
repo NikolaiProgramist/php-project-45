@@ -21,8 +21,21 @@ function greeting(): string
     exit;
 }
 
-function randomOperation(string $operations): string
+function questionAsk(string $question, string $correctAnswer): void
 {
-    $randomOperation = str_shuffle($operations);
-    return $randomOperation[0];
+    line($question);
+
+    $answer = prompt('Your answer');
+    isCorrectAnswer($answer, $correctAnswer);
+}
+
+function isCorrectAnswer(string $correctAnswer, string $name): void
+{
+    $answer = prompt('Your answer');
+
+    if ($correctAnswer !== $answer) {
+        gameOver($answer, $correctAnswer, $name);
+    }
+
+    line('Correct!');
 }

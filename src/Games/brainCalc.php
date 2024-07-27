@@ -3,10 +3,8 @@
 namespace BrainGames\Games\Brain\Calc;
 
 use function cli\line;
-use function cli\prompt;
 use function BrainGames\Engine\greeting;
-use function BrainGames\Engine\gameOver;
-use function BrainGames\Engine\randomOperation;
+use function BrainGames\Engine\questionAsk;
 
 function startBrainCalc(): void
 {
@@ -19,19 +17,19 @@ function startBrainCalc(): void
         $operand2 = rand(0, 100);
         $operation = randomOperation('+-*');
 
-        line('Question: %s %s %s', $operand1, $operation, $operand2);
-
-        $answer = prompt('Your answer');
+        $question = "Question: {$operand1}, {$operation}, {$operand2}";
         $correctAnswer = calc($operand1, $operand2, $operation);
 
-        if ($correctAnswer !== $answer) {
-            gameOver($answer, $correctAnswer, $name);
-        }
-
-        line('Correct!');
+        questionAsk($question, $correctAnswer);
     }
 
     line('Congratulations, %s!', $name);
+}
+
+function randomOperation(string $operations): string
+{
+    $randomOperation = str_shuffle($operations);
+    return $randomOperation[0];
 }
 
 function calc(int $operand1, int $operand2, string $operation): string
