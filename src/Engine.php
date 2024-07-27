@@ -21,18 +21,16 @@ function greeting(): string
     exit;
 }
 
-function questionAsk(string $question, string $correctAnswer): void
+function questionAsk(string $question, string $correctAnswer, string $name): void
 {
     line($question);
 
     $answer = prompt('Your answer');
-    isCorrectAnswer($answer, $correctAnswer);
+    isCorrectAnswer($answer, $correctAnswer, $name);
 }
 
-function isCorrectAnswer(string $correctAnswer, string $name): void
+function isCorrectAnswer(string $answer, string $correctAnswer, string $name): void
 {
-    $answer = prompt('Your answer');
-
     if ($correctAnswer !== $answer) {
         gameOver($answer, $correctAnswer, $name);
     }

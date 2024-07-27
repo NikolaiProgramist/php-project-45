@@ -20,7 +20,7 @@ function startBrainCalc(): void
         $question = "Question: {$operand1}, {$operation}, {$operand2}";
         $correctAnswer = calc($operand1, $operand2, $operation);
 
-        questionAsk($question, $correctAnswer);
+        questionAsk($question, $correctAnswer, $name);
     }
 
     line('Congratulations, %s!', $name);
