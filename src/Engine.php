@@ -2,6 +2,7 @@
 
 namespace BrainGames\Engine;
 
+use JetBrains\PhpStorm\NoReturn;
 use function cli\line;
 use function cli\prompt;
 
@@ -13,7 +14,7 @@ function greeting(): string
     return $name;
 }
 
-function gameOver(string $answer, string $correctAnswer, string $name): void
+#[NoReturn] function gameOver(string $answer, string $correctAnswer, string $name): void
 {
     line('\'%s\' is wrong answer ;(. Correct answer was \'%s\'.', $answer, $correctAnswer);
     line('Let\'s try again, %s!', $name);
