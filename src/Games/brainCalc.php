@@ -17,7 +17,7 @@ function startBrainCalc(): void
         $operand2 = rand(0, 100);
         $operation = randomOperation('+-*');
 
-        $question = "Question: {$operand1}, {$operation}, {$operand2}";
+        $question = "Question: {$operand1} {$operation} {$operand2}";
         $correctAnswer = calc($operand1, $operand2, $operation);
 
         questionAsk($question, $correctAnswer, $name);
