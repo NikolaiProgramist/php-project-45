@@ -3,6 +3,7 @@
 namespace BrainGames\Engine;
 
 use JetBrains\PhpStorm\NoReturn;
+
 use function cli\line;
 use function cli\prompt;
 
