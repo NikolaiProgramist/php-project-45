@@ -21,6 +21,14 @@ function greeting(): string
     exit;
 }
 
+function preparationGame(string $rules): string
+{
+    $name = greeting();
+    line($rules);
+
+    return $name;
+}
+
 function questionAsk(string $question, string $correctAnswer, string $name): void
 {
     line($question);

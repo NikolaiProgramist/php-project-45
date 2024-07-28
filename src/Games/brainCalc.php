@@ -3,14 +3,13 @@
 namespace BrainGames\Games\Brain\Calc;
 
 use function cli\line;
-use function BrainGames\Engine\greeting;
 use function BrainGames\Engine\questionAsk;
+use function BrainGames\Engine\preparationGame;
 
 function startBrainCalc(): void
 {
-    $name = greeting();
-
-    line('What is the result of the expression?');
+    $rules = 'What is the result of the expression?';
+    $name = preparationGame($rules);
 
     for ($i = 1; $i <= 3; $i++) {
         $operand1 = rand(0, 100);
