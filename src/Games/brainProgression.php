@@ -3,31 +3,22 @@
 namespace BrainGames\Games\Brain\Progression;
 
 use function cli\line;
-use function cli\prompt;
-use function BrainGames\Engine\greeting;
-use function BrainGames\Engine\gameOver;
+use function BrainGames\Engine\questionAsk;
+use function BrainGames\Engine\preparationGame;
 
 function startBrainProgression(): void
 {
-    $name = greeting();
-
-    line('What number is missing in the progression?');
+    $rules = 'What number is missing in the progression?';
+    $name = preparationGame($rules);
 
     for ($i = 1; $i <= 3; $i++) {
         $data = randomProgression();
 
         $progression = $data['progression'];
+        $question = "Question: {$progression}";
         $correctAnswer = $data['correctAnswer'];
 
-        line('Question: %s', $progression);
-
-        $answer = prompt('Your answer');
-
-        if ($correctAnswer !== $answer) {
-            gameOver($answer, $correctAnswer, $name);
-        }
-
-        line('Correct!');
+        questionAsk($question, $correctAnswer, $name);
     }
 
     line('Congratulations, %s!', $name);
