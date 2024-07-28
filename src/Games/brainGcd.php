@@ -3,30 +3,22 @@
 namespace BrainGames\Games\Brain\Gcd;
 
 use function cli\line;
-use function cli\prompt;
-use function BrainGames\Engine\greeting;
-use function BrainGames\Engine\gameOver;
+use function BrainGames\Engine\questionAsk;
+use function BrainGames\Engine\preparationGame;
 
 function startBrainGcd(): void
 {
-    $name = greeting();
-
-    line('Find the greatest common divisor of given numbers.');
+    $rules = 'Find the greatest common divisor of given numbers.';
+    $name = preparationGame($rules);
 
     for ($i = 1; $i <= 3; $i++) {
         $num1 = rand(1, 100);
         $num2 = rand(1, 100);
 
-        line('Question: %s %s', $num1, $num2);
-
-        $answer = prompt('Your answer');
+        $question = "Question: {$num1} {$num2}";
         $correctAnswer = gcd($num1, $num2);
 
-        if ($correctAnswer !== $answer) {
-            gameOver($answer, $correctAnswer, $name);
-        }
-
-        line('Correct!');
+        questionAsk($question, $correctAnswer, $name);
     }
 
     line('Congratulations, %s!', $name);
