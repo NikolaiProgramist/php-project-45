@@ -3,31 +3,21 @@
 namespace BrainGames\Games\Brain\Even;
 
 use function cli\line;
-use function cli\prompt;
-use function BrainGames\Engine\greeting;
-use function BrainGames\Engine\gameOver;
+use function BrainGames\Engine\questionAsk;
+use function BrainGames\Engine\preparationGame;
 
 function startBrainEven(): void
 {
-    $name = greeting();
-
-    line('Answer "yes" if the number is even, otherwise answer "no".');
+    $rules = 'Answer "yes" if the number is even, otherwise answer "no".';
+    $name = preparationGame($rules);
 
     for ($i = 1; $i <= 3; $i++) {
         $num = rand(0, 20);
-        line('Question: %s', $num);
-        $answer = prompt('Your answer');
+
+        $question = "Question: $num";
         $correctAnswer = isEven($num);
 
-        if ($answer !== 'yes' && $answer !== 'no') {
-            gameOver($answer, $correctAnswer, $name);
-        }
-
-        if ($correctAnswer !== $answer) {
-            gameOver($answer, $correctAnswer, $name);
-        }
-
-        line('Correct!');
+        questionAsk($question, $correctAnswer, $name);
     }
 
     line('Congratulations, %s!', $name);
