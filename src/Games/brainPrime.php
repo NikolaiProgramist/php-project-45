@@ -3,29 +3,21 @@
 namespace BrainGames\Games\Brain\Prime;
 
 use function cli\line;
-use function cli\prompt;
-use function BrainGames\Engine\greeting;
-use function BrainGames\Engine\gameOver;
+use function BrainGames\Engine\questionAsk;
+use function BrainGames\Engine\preparationGame;
 
 function startBrainPrime(): void
 {
-    $name = greeting();
-
-    line('Answer "yes" if given number is prime. Otherwise answer "no".');
+    $rules = 'Answer "yes" if given number is prime. Otherwise answer "no".';
+    $name = preparationGame($rules);
 
     for ($i = 1; $i <= 3; $i++) {
         $num = rand(0, 100);
 
-        line('Question: %s', $num);
-
-        $answer = prompt('Your answer');
+        $question = "Question: {$num}";
         $correctAnswer = isPrime($num);
 
-        if ($correctAnswer !== $answer) {
-            gameOver($answer, $correctAnswer, $name);
-        }
-
-        line('Correct!');
+        questionAsk($question, $correctAnswer, $name);
     }
 
     line('Congratulations, %s!', $name);
