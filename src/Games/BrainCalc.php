@@ -31,7 +31,7 @@ function randomOperation(): string
 {
     $operations = ['+', '-', '*'];
 
-    return array_rand($operations);
+    return $operations[array_rand($operations)];
 }
 
 function calc(int $operand1, int $operand2, string $operation): string
