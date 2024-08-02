@@ -14,7 +14,7 @@ function startBrainEven(): void
     for ($i = 1; $i <= ROUND_COUNT; $i++) {
         $num = rand(0, 20);
 
-        $data['questions'][] = "Question: $num";
+        $data['questions'][] = "Question: {$num}";
         $data['correctAnswers'][] = isEven($num);
     }
 
