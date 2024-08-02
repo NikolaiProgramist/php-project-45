@@ -2,8 +2,6 @@
 
 namespace BrainGames\Games\Brain\Gcd;
 
-use function cli\line;
-use function BrainGames\Engine\questionAsk;
 use function BrainGames\Engine\preparationGame;
 
 const RULES = 'Find the greatest common divisor of given numbers.';
@@ -11,19 +9,17 @@ const ROUND_COUNT = 3;
 
 function startBrainGcd(): void
 {
-    $name = preparationGame(RULES);
+    $data = [];
 
     for ($i = 1; $i <= ROUND_COUNT; $i++) {
         $num1 = rand(1, 100);
         $num2 = rand(1, 100);
 
-        $question = "Question: {$num1} {$num2}";
-        $correctAnswer = gcd($num1, $num2);
-
-        questionAsk($question, $correctAnswer, $name);
+        $data['questions'][] = "Question: {$num1} {$num2}";
+        $data['correctAnswers'][] = gcd($num1, $num2);
     }
 
-    line('Congratulations, %s!', $name);
+    preparationGame(RULES, ROUND_COUNT, $data);
 }
 
 function gcd(int $num1, int $num2): string
