@@ -20,12 +20,19 @@ function gameOver(string $answer, string $correctAnswer, string $name): void
     exit;
 }
 
-function preparationGame(string $rules): string
+function preparationGame(string $rules, int $roundCount, array $data): void
 {
     $name = greeting();
     line($rules);
 
-    return $name;
+    for ($i = 0; $i <= $roundCount - 1; $i++) {
+        $question = $data['questions'][$i];
+        $correctAnswers = $data['correctAnswers'][$i];
+
+        questionAsk($question, $correctAnswers, $name);
+    }
+
+    line('Congratulations, %s!', $name);
 }
 
 function questionAsk(string $question, string $correctAnswer, string $name): void
