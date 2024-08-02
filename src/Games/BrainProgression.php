@@ -6,10 +6,11 @@ use function cli\line;
 use function BrainGames\Engine\questionAsk;
 use function BrainGames\Engine\preparationGame;
 
+const RULES = 'What number is missing in the progression?';
+
 function startBrainProgression(): void
 {
-    $rules = 'What number is missing in the progression?';
-    $name = preparationGame($rules);
+    $name = preparationGame(RULES);
 
     for ($i = 1; $i <= 3; $i++) {
         $data = randomProgression();

@@ -6,10 +6,11 @@ use function cli\line;
 use function BrainGames\Engine\questionAsk;
 use function BrainGames\Engine\preparationGame;
 
+const RULES = 'Answer "yes" if given number is prime. Otherwise answer "no".';
+
 function startBrainPrime(): void
 {
-    $rules = 'Answer "yes" if given number is prime. Otherwise answer "no".';
-    $name = preparationGame($rules);
+    $name = preparationGame(RULES);
 
     for ($i = 1; $i <= 3; $i++) {
         $num = rand(0, 100);

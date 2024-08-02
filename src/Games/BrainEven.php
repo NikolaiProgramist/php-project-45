@@ -6,10 +6,11 @@ use function cli\line;
 use function BrainGames\Engine\questionAsk;
 use function BrainGames\Engine\preparationGame;
 
+const RULES = 'Answer "yes" if the number is even, otherwise answer "no".';
+
 function startBrainEven(): void
 {
-    $rules = 'Answer "yes" if the number is even, otherwise answer "no".';
-    $name = preparationGame($rules);
+    $name = preparationGame(RULES);
 
     for ($i = 1; $i <= 3; $i++) {
         $num = rand(0, 20);

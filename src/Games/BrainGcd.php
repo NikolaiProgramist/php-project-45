@@ -6,10 +6,11 @@ use function cli\line;
 use function BrainGames\Engine\questionAsk;
 use function BrainGames\Engine\preparationGame;
 
+const RULES = 'Find the greatest common divisor of given numbers.';
+
 function startBrainGcd(): void
 {
-    $rules = 'Find the greatest common divisor of given numbers.';
-    $name = preparationGame($rules);
+    $name = preparationGame(RULES);
 
     for ($i = 1; $i <= 3; $i++) {
         $num1 = rand(1, 100);

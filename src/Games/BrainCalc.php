@@ -6,10 +6,11 @@ use function cli\line;
 use function BrainGames\Engine\questionAsk;
 use function BrainGames\Engine\preparationGame;
 
+const RULES = 'What is the result of the expression?';
+
 function startBrainCalc(): void
 {
-    $rules = 'What is the result of the expression?';
-    $name = preparationGame($rules);
+    $name = preparationGame(RULES);
 
     for ($i = 1; $i <= 3; $i++) {
         $operand1 = rand(0, 100);
