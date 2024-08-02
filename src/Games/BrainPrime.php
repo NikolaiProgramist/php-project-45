@@ -2,8 +2,6 @@
 
 namespace BrainGames\Games\Brain\Prime;
 
-use function cli\line;
-use function BrainGames\Engine\questionAsk;
 use function BrainGames\Engine\preparationGame;
 
 const RULES = 'Answer "yes" if given number is prime. Otherwise answer "no".';
@@ -11,18 +9,16 @@ const ROUND_COUNT = 3;
 
 function startBrainPrime(): void
 {
-    $name = preparationGame(RULES);
+    $data = [];
 
     for ($i = 1; $i <= ROUND_COUNT; $i++) {
         $num = rand(0, 100);
 
-        $question = "Question: {$num}";
-        $correctAnswer = isPrime($num);
-
-        questionAsk($question, $correctAnswer, $name);
+        $data['questions'][] = "Question: {$num}";
+        $data['correctAnswers'][] = isPrime($num);
     }
 
-    line('Congratulations, %s!', $name);
+    preparationGame(RULES, ROUND_COUNT, $data);
 }
 
 function isPrime(int $num): string
