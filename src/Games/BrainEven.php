@@ -2,8 +2,6 @@
 
 namespace BrainGames\Games\Brain\Even;
 
-use function cli\line;
-use function BrainGames\Engine\questionAsk;
 use function BrainGames\Engine\preparationGame;
 
 const RULES = 'Answer "yes" if the number is even, otherwise answer "no".';
