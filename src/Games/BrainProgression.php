@@ -7,12 +7,13 @@ use function BrainGames\Engine\questionAsk;
 use function BrainGames\Engine\preparationGame;
 
 const RULES = 'What number is missing in the progression?';
+const ROUND_COUNT = 3;
 
 function startBrainProgression(): void
 {
     $name = preparationGame(RULES);
 
-    for ($i = 1; $i <= 3; $i++) {
+    for ($i = 1; $i <= ROUND_COUNT; $i++) {
         $data = randomProgression();
 
         $progression = $data['progression'];

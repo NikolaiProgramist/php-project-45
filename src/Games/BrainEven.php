@@ -7,12 +7,13 @@ use function BrainGames\Engine\questionAsk;
 use function BrainGames\Engine\preparationGame;
 
 const RULES = 'Answer "yes" if the number is even, otherwise answer "no".';
+const ROUND_COUNT = 3;
 
 function startBrainEven(): void
 {
     $name = preparationGame(RULES);
 
-    for ($i = 1; $i <= 3; $i++) {
+    for ($i = 1; $i <= ROUND_COUNT; $i++) {
         $num = rand(0, 20);
 
         $question = "Question: $num";
