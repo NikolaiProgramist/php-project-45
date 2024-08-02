@@ -11,18 +11,16 @@ const ROUND_COUNT = 3;
 
 function startBrainEven(): void
 {
-    $name = preparationGame(RULES);
+    $data = [];
 
     for ($i = 1; $i <= ROUND_COUNT; $i++) {
         $num = rand(0, 20);
 
-        $question = "Question: $num";
-        $correctAnswer = isEven($num);
-
-        questionAsk($question, $correctAnswer, $name);
+        $data['questions'][] = "Question: $num";
+        $data['correctAnswers'][] = isEven($num);
     }
 
-    line('Congratulations, %s!', $name);
+    preparationGame(RULES, ROUND_COUNT, $data);
 }
 
 function isEven(int $num): string
