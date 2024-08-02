@@ -2,7 +2,6 @@
 
 namespace BrainGames\Games\Brain\Calc;
 
-use function cli\line;
 use function BrainGames\Engine\preparationGame;
 
 const RULES = 'What is the result of the expression?';
