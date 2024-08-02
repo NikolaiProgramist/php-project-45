@@ -15,7 +15,7 @@ function startBrainCalc(): void
     for ($i = 1; $i <= 3; $i++) {
         $operand1 = rand(0, 100);
         $operand2 = rand(0, 100);
-        $operation = randomOperation('+-*');
+        $operation = randomOperation();
 
         $question = "Question: {$operand1} {$operation} {$operand2}";
         $correctAnswer = calc($operand1, $operand2, $operation);
@@ -26,10 +26,11 @@ function startBrainCalc(): void
     line('Congratulations, %s!', $name);
 }
 
-function randomOperation(string $operations): string
+function randomOperation(): string
 {
-    $randomOperation = str_shuffle($operations);
-    return $randomOperation[0];
+    $operations = ['+', '-', '*'];
+
+    return array_rand($operations);
 }
 
 function calc(int $operand1, int $operand2, string $operation): string
