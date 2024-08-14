@@ -9,16 +9,16 @@ const ROUND_COUNT = 3;
 
 function startBrainProgression(): void
 {
-    $data = [];
+    $gameData = [];
 
     for ($i = 1; $i <= ROUND_COUNT; $i++) {
         $dataProgression = randomProgression();
 
-        $data['questions'][] = "Question: {$dataProgression['progression']}";
-        $data['correctAnswers'][] = $dataProgression['correctAnswer'];
+        $gameData['questions'][] = "Question: {$dataProgression['progression']}";
+        $gameData['correctAnswers'][] = $dataProgression['correctAnswer'];
     }
 
-    startGame(RULES, ROUND_COUNT, $data);
+    startGame(RULES, ROUND_COUNT, $gameData);
 }
 
 function randomProgression(): array

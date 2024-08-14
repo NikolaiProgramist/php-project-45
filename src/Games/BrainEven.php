@@ -9,7 +9,7 @@ const ROUND_COUNT = 3;
 
 function startBrainEven(): void
 {
-    $data = [];
+    $gameData = [];
 
     for ($i = 1; $i <= ROUND_COUNT; $i++) {
         $num = rand(0, 20);
@@ -20,11 +20,11 @@ function startBrainEven(): void
             $correctAnswer = 'no';
         }
 
-        $data['questions'][] = "Question: {$num}";
-        $data['correctAnswers'][] = $correctAnswer;
+        $gameData['questions'][] = "Question: {$num}";
+        $gameData['correctAnswers'][] = $correctAnswer;
     }
 
-    startGame(RULES, ROUND_COUNT, $data);
+    startGame(RULES, ROUND_COUNT, $gameData);
 }
 
 function isEven(int $num): bool

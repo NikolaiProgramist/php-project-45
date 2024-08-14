@@ -9,18 +9,18 @@ const ROUND_COUNT = 3;
 
 function startBrainCalc(): void
 {
-    $data = [];
+    $gameData = [];
 
     for ($i = 1; $i <= ROUND_COUNT; $i++) {
         $operand1 = rand(0, 100);
         $operand2 = rand(0, 100);
         $operation = randomOperation();
 
-        $data['questions'][] = "Question: {$operand1} {$operation} {$operand2}";
-        $data['correctAnswers'][] = calc($operand1, $operand2, $operation);
+        $gameData['questions'][] = "Question: {$operand1} {$operation} {$operand2}";
+        $gameData['correctAnswers'][] = calc($operand1, $operand2, $operation);
     }
 
-    startGame(RULES, ROUND_COUNT, $data);
+    startGame(RULES, ROUND_COUNT, $gameData);
 }
 
 function randomOperation(): string

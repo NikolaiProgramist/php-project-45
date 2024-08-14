@@ -9,16 +9,16 @@ const ROUND_COUNT = 3;
 
 function startBrainPrime(): void
 {
-    $data = [];
+    $gameData = [];
 
     for ($i = 1; $i <= ROUND_COUNT; $i++) {
         $num = rand(0, 100);
 
-        $data['questions'][] = "Question: {$num}";
-        $data['correctAnswers'][] = isPrime($num);
+        $gameData['questions'][] = "Question: {$num}";
+        $gameData['correctAnswers'][] = isPrime($num);
     }
 
-    startGame(RULES, ROUND_COUNT, $data);
+    startGame(RULES, ROUND_COUNT, $gameData);
 }
 
 function isPrime(int $num): string

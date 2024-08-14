@@ -9,17 +9,17 @@ const ROUND_COUNT = 3;
 
 function startBrainGcd(): void
 {
-    $data = [];
+    $gameData = [];
 
     for ($i = 1; $i <= ROUND_COUNT; $i++) {
         $num1 = rand(1, 100);
         $num2 = rand(1, 100);
 
-        $data['questions'][] = "Question: {$num1} {$num2}";
-        $data['correctAnswers'][] = gcd($num1, $num2);
+        $gameData['questions'][] = "Question: {$num1} {$num2}";
+        $gameData['correctAnswers'][] = gcd($num1, $num2);
     }
 
-    startGame(RULES, ROUND_COUNT, $data);
+    startGame(RULES, ROUND_COUNT, $gameData);
 }
 
 function gcd(int $num1, int $num2): string
