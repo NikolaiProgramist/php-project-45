@@ -14,18 +14,24 @@ function startBrainEven(): void
     for ($i = 1; $i <= ROUND_COUNT; $i++) {
         $num = rand(0, 20);
 
+        if (isEven($num)) {
+            $correctAnswer = 'yes';
+        } else {
+            $correctAnswer = 'no';
+        }
+
         $data['questions'][] = "Question: {$num}";
-        $data['correctAnswers'][] = isEven($num);
+        $data['correctAnswers'][] = $correctAnswer;
     }
 
     startGame(RULES, ROUND_COUNT, $data);
 }
 
-function isEven(int $num): string
+function isEven(int $num): bool
 {
     if ($num % 2 === 0) {
-        return 'yes';
+        return true;
     } else {
-        return 'no';
+        return false;
     }
 }
