@@ -25,7 +25,7 @@ function preparationGame(string $rules, int $roundCount, array $data): void
     $name = greeting();
     line($rules);
 
-    for ($i = 0; $i <= $roundCount - 1; $i++) {
+    for ($i = 0; $i < $roundCount; $i++) {
         $question = $data['questions'][$i];
         $correctAnswers = $data['correctAnswers'][$i];
 
