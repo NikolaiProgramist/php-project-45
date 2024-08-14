@@ -36,6 +36,6 @@ function calc(int $operand1, int $operand2, string $operation): string
         '+' => (string) ($operand1 + $operand2),
         '-' => (string) ($operand1 - $operand2),
         '*' => (string) ($operand1 * $operand2),
-        default => ''
+        default => throw new \Exception('There is no such sign!')
     };
 }
