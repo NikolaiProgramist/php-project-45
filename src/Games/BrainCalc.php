@@ -2,7 +2,7 @@
 
 namespace BrainGames\Games\Brain\Calc;
 
-use function BrainGames\Engine\preparationGame;
+use function BrainGames\Engine\startGame;
 
 const RULES = 'What is the result of the expression?';
 const ROUND_COUNT = 3;
@@ -20,7 +20,7 @@ function startBrainCalc(): void
         $data['correctAnswers'][] = calc($operand1, $operand2, $operation);
     }
 
-    preparationGame(RULES, ROUND_COUNT, $data);
+    startGame(RULES, ROUND_COUNT, $data);
 }
 
 function randomOperation(): string

@@ -2,7 +2,7 @@
 
 namespace BrainGames\Games\Brain\Progression;
 
-use function BrainGames\Engine\preparationGame;
+use function BrainGames\Engine\startGame;
 
 const RULES = 'What number is missing in the progression?';
 const ROUND_COUNT = 3;
@@ -18,7 +18,7 @@ function startBrainProgression(): void
         $data['correctAnswers'][] = $dataProgression['correctAnswer'];
     }
 
-    preparationGame(RULES, ROUND_COUNT, $data);
+    startGame(RULES, ROUND_COUNT, $data);
 }
 
 function randomProgression(): array

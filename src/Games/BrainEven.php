@@ -2,7 +2,7 @@
 
 namespace BrainGames\Games\Brain\Even;
 
-use function BrainGames\Engine\preparationGame;
+use function BrainGames\Engine\startGame;
 
 const RULES = 'Answer "yes" if the number is even, otherwise answer "no".';
 const ROUND_COUNT = 3;
@@ -18,7 +18,7 @@ function startBrainEven(): void
         $data['correctAnswers'][] = isEven($num);
     }
 
-    preparationGame(RULES, ROUND_COUNT, $data);
+    startGame(RULES, ROUND_COUNT, $data);
 }
 
 function isEven(int $num): string

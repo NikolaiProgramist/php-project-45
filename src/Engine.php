@@ -20,7 +20,7 @@ function gameOver(string $answer, string $correctAnswer, string $name): void
     exit;
 }
 
-function preparationGame(string $rules, int $roundCount, array $data): void
+function startGame(string $rules, int $roundCount, array $data): void
 {
     $name = greeting();
     line($rules);
