@@ -14,24 +14,30 @@ function startBrainPrime(): void
     for ($i = 1; $i <= ROUND_COUNT; $i++) {
         $num = rand(0, 100);
 
+        if (isPrime($num)) {
+            $correctAnswer = 'yes';
+        } else {
+            $correctAnswer = 'no';
+        }
+
         $gameData['questions'][] = "Question: {$num}";
-        $gameData['correctAnswers'][] = isPrime($num);
+        $gameData['correctAnswers'][] = $correctAnswer;
     }
 
     startGame(RULES, ROUND_COUNT, $gameData);
 }
 
-function isPrime(int $num): string
+function isPrime(int $num): bool
 {
     if ($num === 0 || $num === 1) {
-        return 'no';
+        return false;
     }
 
     for ($i = 2; $i < $num; $i++) {
         if ($num % $i === 0) {
-            return 'no';
+            return false;
         }
     }
 
-    return 'yes';
+    return true;
 }
