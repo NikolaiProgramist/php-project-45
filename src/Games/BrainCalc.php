@@ -12,8 +12,8 @@ function startBrainCalc(): void
     $gameData = [];
 
     for ($i = 1; $i <= ROUND_COUNT; $i++) {
-        $operand1 = rand(0, 100);
-        $operand2 = rand(0, 100);
+        $operand1 = random_int(0, 100);
+        $operand2 = random_int(0, 100);
         $operation = randomOperation();
 
         $gameData['questions'][] = "Question: {$operand1} {$operation} {$operand2}";

@@ -12,7 +12,7 @@ function startBrainEven(): void
     $gameData = [];
 
     for ($i = 1; $i <= ROUND_COUNT; $i++) {
-        $num = rand(0, 20);
+        $num = random_int(0, 20);
 
         if (isEven($num)) {
             $correctAnswer = 'yes';

@@ -12,7 +12,7 @@ function startBrainPrime(): void
     $gameData = [];
 
     for ($i = 1; $i <= ROUND_COUNT; $i++) {
-        $num = rand(0, 100);
+        $num = random_int(0, 100);
 
         if (isPrime($num)) {
             $correctAnswer = 'yes';

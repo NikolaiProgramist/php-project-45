@@ -25,8 +25,8 @@ function randomProgression(): array
 {
     $progression = [];
 
-    $progressionLength = rand(5, 10);
-    $progressionChange = rand(1, 10);
+    $progressionLength = random_int(5, 10);
+    $progressionChange = random_int(1, 10);
     $progressionNumber = $progressionChange;
 
     for ($i = 0; $i < $progressionLength; $i++) {
@@ -34,7 +34,7 @@ function randomProgression(): array
         $progressionNumber += $progressionChange;
     }
 
-    $randomNumber = rand(0, $progressionLength - 1);
+    $randomNumber = random_int(0, $progressionLength - 1);
     $correctAnswer = (string) $progression[$randomNumber];
     $progression[$randomNumber] = '..';
 
