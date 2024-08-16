@@ -27,27 +27,31 @@ function startGame(string $rules, int $roundCount, array $data): void
 
     for ($i = 0; $i < $roundCount; $i++) {
         $question = $data['questions'][$i];
-        $correctAnswers = $data['correctAnswers'][$i];
+        $correctAnswer = $data['correctAnswers'][$i];
 
-        questionAsk($question, $correctAnswers, $name);
+        $answer = questionAsk($question);
+
+        if (isCorrectAnswer($answer, $correctAnswer)) {
+            line('Correct!');
+        } else {
+            gameOver($answer, $correctAnswer, $name);
+        }
     }
 
     line('Congratulations, %s!', $name);
 }
 
-function questionAsk(string $question, string $correctAnswer, string $name): void
+function questionAsk(string $question): string
 {
     line($question);
-
-    $answer = prompt('Your answer');
-    isCorrectAnswer($answer, $correctAnswer, $name);
+    return prompt('Your answer');
 }
 
-function isCorrectAnswer(string $answer, string $correctAnswer, string $name): void
+function isCorrectAnswer(string $answer, string $correctAnswer): bool
 {
-    if ($correctAnswer !== $answer) {
-        gameOver($answer, $correctAnswer, $name);
+    if ($correctAnswer === $answer) {
+        return true;
+    } else {
+        return false;
     }
-
-    line('Correct!');
 }
