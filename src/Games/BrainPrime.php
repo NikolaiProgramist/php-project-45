@@ -4,8 +4,9 @@ namespace BrainGames\Games\Brain\Prime;
 
 use function BrainGames\Engine\startGame;
 
+use const BrainGames\Engine\ROUND_COUNT;
+
 const RULES = 'Answer "yes" if given number is prime. Otherwise answer "no".';
-const ROUND_COUNT = 3;
 
 function startBrainPrime(): void
 {

@@ -4,8 +4,9 @@ namespace BrainGames\Games\Brain\Calc;
 
 use function BrainGames\Engine\startGame;
 
+use const BrainGames\Engine\ROUND_COUNT;
+
 const RULES = 'What is the result of the expression?';
-const ROUND_COUNT = 3;
 
 function startBrainCalc(): void
 {

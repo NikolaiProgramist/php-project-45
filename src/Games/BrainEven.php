@@ -4,8 +4,9 @@ namespace BrainGames\Games\Brain\Even;
 
 use function BrainGames\Engine\startGame;
 
+use const BrainGames\Engine\ROUND_COUNT;
+
 const RULES = 'Answer "yes" if the number is even, otherwise answer "no".';
-const ROUND_COUNT = 3;
 
 function startBrainEven(): void
 {

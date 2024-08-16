@@ -4,8 +4,9 @@ namespace BrainGames\Games\Brain\Progression;
 
 use function BrainGames\Engine\startGame;
 
+use const BrainGames\Engine\ROUND_COUNT;
+
 const RULES = 'What number is missing in the progression?';
-const ROUND_COUNT = 3;
 
 function startBrainProgression(): void
 {

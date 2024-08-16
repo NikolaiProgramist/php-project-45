@@ -4,8 +4,9 @@ namespace BrainGames\Games\Brain\Gcd;
 
 use function BrainGames\Engine\startGame;
 
+use const BrainGames\Engine\ROUND_COUNT;
+
 const RULES = 'Find the greatest common divisor of given numbers.';
-const ROUND_COUNT = 3;
 
 function startBrainGcd(): void
 {
