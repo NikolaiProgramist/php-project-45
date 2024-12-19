@@ -56,3 +56,7 @@ make brain-even
 ### Game brain-prime
 
 [![asciicast](https://asciinema.org/a/fTuJ6w7noDd8AtdI1ShPt0DmX.svg)](https://asciinema.org/a/fTuJ6w7noDd8AtdI1ShPt0DmX)
+
+## Stargazers over time
+
+[![Stargazers over time](https://starchart.cc/NikolaiProgramist/php-project-45.svg?variant=adaptive)](https://starchart.cc/NikolaiProgramist/php-project-45)
