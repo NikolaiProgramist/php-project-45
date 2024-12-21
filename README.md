@@ -59,3 +59,4 @@ make brain-even
 
 ## Stargazers over time
 
+[![Stargazers over time](https://starchart.cc/NikolaiProgramist/php-project-45.svg?variant=adaptive)](https://starchart.cc/NikolaiProgramist/php-project-45)
